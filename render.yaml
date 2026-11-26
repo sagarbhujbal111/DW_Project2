@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: cartpulse-dw
+    runtime: python
+    rootDir: CartPulse
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: DB_HOST
+        value: ""
+      - key: DB_PORT
+        value: "3306"
+      - key: DB_NAME
+        value: ecommerce_dw
+      - key: DB_USER
+        value: cartpulse_reader
+      - key: DB_PASSWORD
+        generateValue: true

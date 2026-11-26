@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#122d26">
+<title>CartPulse — Pune E-Commerce &amp; Customer Retention Data Warehouse</title>
+<link rel="icon" href="/static/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/style.css">
+<script async src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script defer src="/static/dashboard.js"></script>
+</head>
+<body>
+<svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+<symbol id="users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20v-2c0-3 3-5 7-5s7 2 7 5v2M16 5c4 0 5 6 1 7m1 2c3 1 4 3 4 6"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1116 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3.4"/><path d="M4 5.5v12c0 4.5 16 4.5 16 0v-12M4 11c0 4.5 16 4.5 16 0"/></symbol>
+<symbol id="code" viewBox="0 0 24 24"><path d="m7 7-5 5 5 5m10-10 5 5-5 5m-4-14-2 18"/></symbol>
+<symbol id="calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 2v6m10-6v6M3 11h18"/></symbol>
+<symbol id="filter" viewBox="0 0 24 24"><path d="M3 7h6m4 0h8M3 17h10m4 0h4"/><circle cx="11" cy="7" r="2"/><circle cx="15" cy="17" r="2"/></symbol>
+<symbol id="box" viewBox="0 0 24 24"><path d="m3 7 9-5 9 5v10l-9 5-9-5Zm0 0 9 5 9-5m-9 5v10M7 4.8l10 5.4"/></symbol>
+<symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="rupee" viewBox="0 0 24 24"><path d="M6 4h13M6 9h13M8 4c7 0 8 10-1 10l8 7"/></symbol>
+<symbol id="bag" viewBox="0 0 24 24"><path d="M4 8h16l1 13H3ZM8 9V6a4 4 0 018 0v3"/></symbol>
+<symbol id="wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="3"/><path d="M4 6l12-4 1 4m4 5h-6v5h6"/></symbol>
+<symbol id="bars" viewBox="0 0 24 24"><path d="M3 20h18M6 16v-5m6 5V4m6 12V8"/></symbol>
+<symbol id="play" viewBox="0 0 24 24"><path d="m7 4 12 8-12 8Z"/></symbol>
+<symbol id="layers" viewBox="0 0 24 24"><path d="m2 8 10-6 10 6-10 6ZM2 12l10 6 10-6M2 16l10 6 10-6"/></symbol>
+<symbol id="menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+</defs></svg>
+<a class="skip" href="#main">Skip to dashboard</a>
+<aside id="sidebar">
+<div class="brand"><img src="/static/mark.svg" alt=""><span>CartPulse</span></div>
+<p class="tagline">From first order to forever customer</p>
+<div class="nav-group">WORKSPACE</div>
+<nav aria-label="Workspace">
+<a href="#overview" data-page="overview" class="active"><svg><use href="#grid"/></svg>Overview</a>
+<a href="#retention" data-page="retention"><svg><use href="#users"/></svg>Customer retention</a>
+<a href="#zones" data-page="zones"><svg><use href="#pin"/></svg>Pune zones</a>
+</nav>
+<div class="nav-group">DATA TOOLS</div>
+<nav aria-label="Data tools"><a href="#explorer" data-page="explorer"><svg><use href="#code"/></svg>SQL Explorer</a></nav>
+<div class="rail-foot"><div class="db-icon"><svg><use href="#db"/></svg></div><div><strong id="engine-name">Commerce warehouse</strong><small><i id="dot"></i><span id="dbstate">Connecting</span></small></div></div>
+</aside>
+<div class="shell"><header><div class="breadcrumbs"><button id="menu-toggle" aria-label="Open navigation" aria-expanded="false"><svg><use href="#menu"/></svg></button><svg><use href="#layers"/></svg><span class="warehouse-name">Pune E-Commerce &amp; Customer Retention Data Warehouse</span><em>/</em><b id="crumb">Overview</b></div><div class="header-end"><span><svg><use href="#pin"/></svg>Pune, Maharashtra</span><i></i><span class="avatar" aria-label="CartPulse">CP</span></div></header>
+<main id="main">
+<section class="heading"><div><div class="eyebrow"><span></span> PUNE COMMERCE ANALYTICS</div><h1 id="title">Warehouse overview</h1><p id="intro">Track revenue, orders and customer loyalty across Pune’s six micro-markets.</p></div>
+<div class="live"><i></i><span id="live">Connecting</span></div></section>
+<div class="filterbar"><span class="filter-title"><svg><use href="#filter"/></svg>Filters</span>
+<label><svg><use href="#pin"/></svg><select id="zone" aria-label="Pune zone"><option value="">All Pune zones</option></select></label>
+<label><svg><use href="#box"/></svg><select id="category" aria-label="Product category"><option value="">All categories</option></select></label>
+<label><svg><use href="#calendar"/></svg><select id="period" aria-label="Year and quarter"><option value="">All dates</option></select></label>
+<button id="reset" hidden>Reset</button></div>
+<div id="status" role="status" hidden></div>
+<section id="overview" class="page">
+<div class="metrics" id="metrics"></div>
+<div class="chart-row"><article class="panel trend-panel"><div class="panel-head"><div><h2>Revenue &amp; order trend</h2><p>Monthly commerce performance</p></div><span class="chip">Monthly</span></div>
+<div class="chart-key"><span><i class="square"></i>Revenue</span><span><i class="line-key"></i>Orders</span></div>
+<div class="plot trend"><canvas id="trend-chart" aria-label="Monthly INR revenue and orders" role="img"></canvas></div>
+<div class="chart-foot" id="peak"></div></article>
+<article class="panel"><div class="panel-head"><div><h2>Sales by Pune zone</h2><p>Share of total revenue</p></div><svg class="head-icon"><use href="#pin"/></svg></div>
+<div class="donut"><canvas id="zone-chart" role="img" aria-label="Revenue share by Pune zone"></canvas><div><small>Total sales</small><strong id="donut-total">—</strong></div></div>
+<div id="zone-legend" class="zone-legend"></div></article></div>
+<div class="lower-row"><article class="panel"><div class="panel-head"><div><h2>Category performance</h2><p>Revenue and gross profit margin by category</p></div></div><div class="chart-key"><span><i class="square"></i>Revenue</span><span><i class="square orange"></i>Margin</span></div><div class="plot category"><canvas id="category-chart" role="img" aria-label="Category revenue and margin"></canvas></div></article>
+<article class="panel"><div class="panel-head"><div><h2>Zone performance</h2><p>Order volume and repeat purchase activity</p></div></div><div id="zone-summary" class="table-scroll"></div></article></div>
+</section>
+<section id="retention" class="page" hidden><article class="panel"><div class="panel-head"><div><h2>Monthly retention cohorts</h2><p>Customers grouped by first purchase in the selected zone and category.</p></div></div><div id="cohort-table" class="table-scroll"></div><p class="note">Month 0 is the acquisition month. Darker cells indicate higher retention. A dash marks months beyond the selected period.</p></article></section>
+<section id="zones" class="page" hidden><article class="panel"><div class="panel-head"><div><h2>Pune zone performance &amp; delivery insights</h2><p>Delivery PIN codes, order demand and repeat buying across micro-markets.</p></div></div><div id="zone-details" class="table-scroll"></div></article></section>
+<section id="explorer" class="page" hidden>
+<article class="panel"><div class="panel-head"><div><h2>Warehouse star schema</h2><p>Each order links to a customer, product, delivery region and calendar date.</p></div><span class="chip" id="engine-chip">Warehouse</span></div><div id="schema"></div></article>
+<article class="panel"><div class="panel-head"><div><h2>Dashboard queries</h2><p>Executed statements and bound parameters for the current filters.</p></div></div><label class="field-label" for="query-type">Analysis</label><select id="query-type" class="field"></select><pre id="query-source"></pre><p id="query-args" class="note"></p></article>
+<article class="panel"><div class="panel-head"><div><h2>Read-only SQL sandbox</h2><p>Query the warehouse tables and views. Results show up to 200 rows.</p></div><span class="chip">SELECT only</span></div>
+<label class="field-label" for="sql">SQL statement</label><textarea id="sql" spellcheck="false">SELECT zone_name, pin_code, orders, revenue_inr
+FROM vw_pune_zone_sales
+ORDER BY revenue_inr DESC</textarea><button id="run"><svg><use href="#play"/></svg>Run query</button><p id="sql-status" role="status"></p><div id="results" class="table-scroll"></div></article></section>
+<footer><span>CartPulse <span class="footer-tag">· From first order to forever customer</span></span><span id="updated"></span></footer>
+</main></div></body></html>
